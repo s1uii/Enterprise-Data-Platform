@@ -78,6 +78,18 @@ Build an end-to-end data platform for Walmart sales data using Microsoft Azure a
 - [ ] Microsoft Fabric Implementation
 - [ ] Platform Comparison
 
+## Design Decisions
+
+### Data Model
+
+A single fact table was selected instead of implementing a full Star Schema.
+
+**Reason:**
+
+The Walmart Sales dataset contains a single business entity (weekly sales) with a limited number of descriptive attributes. Implementing multiple dimension tables would introduce unnecessary complexity without providing significant analytical benefits.
+
+This approach keeps the solution simple while still following Data Engineering best practices. If additional datasets (such as Customers, Products, or Stores) become available, the model can be extended into a Star Schema.
+
 ---
 
 ## Learning Objectives
